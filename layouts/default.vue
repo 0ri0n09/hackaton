@@ -2,9 +2,9 @@
 </script>
 
 <template>
-  <div>
+  <main class="flex-1 relative">
     <slot />
-  </div>
+  </main>
 </template>
 
 <style scoped>
