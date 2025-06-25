@@ -34,18 +34,8 @@
       </div>
     </div>
 
-    <!-- Header -->
-    <header class="relative z-20 py-8 px-4 text-center">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-        🌍 Ton Impact en KM
-      </h1>
-      <p class="text-xl md:text-2xl text-gray-700 font-medium italic mb-4">
-        "Chaque kilomètre laisse une trace."
-      </p>
-      <p class="text-gray-600 max-w-2xl mx-auto">
-        Découvre l'impact environnemental de tes déplacements et trouve des alternatives plus vertes.
-      </p>
-    </header>
+    <Header />
+    <RandomFacts />
 
     <!-- Contenu principal -->
     <div class="container mx-auto px-4 py-8 relative z-10">
@@ -84,7 +74,7 @@
                     :key="transport.id"
                     type="button"
                     @click="selectedTransport = transport.id"
-                    class="p-3 sm:p-4 border-2 rounded-lg transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500"
+                    class="cursor-pointer p-3 sm:p-4 border-2 rounded-lg transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500"
                     :class="selectedTransport === transport.id
                     ? 'border-green-500 bg-green-50 shadow-lg'
                     : 'border-gray-300 hover:border-green-300'"
@@ -100,7 +90,7 @@
             <button
                 type="submit"
                 :disabled="!kilometers || !selectedTransport"
-                class="w-full py-3 sm:py-4 px-6 bg-gradient-to-r from-green-500 to-blue-500 text-white text-lg sm:text-xl font-bold rounded-lg hover:from-green-600 hover:to-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500"
+                class="w-full py-3 sm:py-4 px-6 bg-gradient-to-r from-green-500 to-blue-500 text-white text-lg sm:text-xl font-bold rounded-lg hover:from-green-600 hover:to-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 cursor-pointer"
             >
               🌍 Calculer mon empreinte
             </button>
@@ -165,13 +155,13 @@
           <div class="flex flex-col sm:flex-row gap-4">
             <button
                 @click="resetCalculator"
-                class="flex-1 py-3 px-6 bg-gray-500 text-white font-medium rounded-lg hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
+                class="flex-1 py-3 px-6 bg-gray-500 text-white font-medium rounded-lg hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 cursor-pointer"
             >
               🔄 Nouveau calcul
             </button>
             <button
                 @click="shareResult"
-                class="flex-1 py-3 px-6 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                class="flex-1 py-3 px-6 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
             >
               📤 Partager
             </button>
@@ -184,6 +174,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import RandomFacts from "~/components/RandomFact.vue";
 
 // État réactif
 const kilometers = ref(0)
