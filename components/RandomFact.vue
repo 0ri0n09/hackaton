@@ -181,9 +181,11 @@ onMounted(() => {
       <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:animate-shimmer"></div>
     </div>
 
-    <button class="mt-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-center cursor-pointer" @click="generateNewFact">
-      Générer un nouveau fait
-    </button>
+    <div class="text-center">
+      <button class="mt-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-center cursor-pointer" @click="generateNewFact">
+        Générer un nouveau fait
+      </button>
+    </div>
 
     <!-- Compteur de faits -->
     <div v-if="factCount > 0" class="text-center mt-4">
