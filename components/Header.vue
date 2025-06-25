@@ -8,7 +8,7 @@
         Ton Impact en KM
       </h1>
     <p class="text-xl md:text-2xl text-gray-700 font-medium italic mb-4">
-      "Chaque kilomètre laisse une trace."
+      "Chaque kilomètre laisse une trace"
     </p>
     <p class="text-gray-600 max-w-2xl mx-auto">
       Découvre l'impact environnemental de tes déplacements et trouve des alternatives plus vertes.
