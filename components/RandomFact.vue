@@ -17,7 +17,7 @@ async function generateNewFact() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer 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`,
+        'Authorization': `Bearer ...`,
       },
       body: JSON.stringify({
         model: 'gpt-4o-mini', // Modèle corrigé
